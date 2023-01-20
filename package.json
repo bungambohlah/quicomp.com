@@ -1,9 +1,9 @@
 {
-  "name": "vite-react-ts-tailwind-starter",
+  "name": "quicomp-com",
   "version": "1.0.0",
   "license": "MIT",
   "author": {
-    "name": "TeXmeijin"
+    "name": "Afif Abdillah Jusuf"
   },
   "scripts": {
     "dev": "vite",
