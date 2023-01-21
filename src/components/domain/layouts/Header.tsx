@@ -2,88 +2,80 @@ import { Outlet, Link } from 'react-router-dom';
 import { useAuthState } from '~/components/contexts/UserContext';
 import { SignInButton } from '../auth/SignInButton';
 import { SignOutButton } from '../auth/SignOutButton';
+import LogoText from '../../../logo-text.png';
+
+type ListItemProps = {
+  className?: string;
+};
+const ListItem = ({ className = '' }: ListItemProps) => {
+  return (
+    <>
+      <li>
+        <a href="#home" className={className} aria-current="page">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" className={className}>
+          About
+        </a>
+      </li>
+      <li>
+        <a href="#services" className={className}>
+          Services
+        </a>
+      </li>
+      <li>
+        <a href="#contacts" className={className}>
+          Contact
+        </a>
+      </li>
+    </>
+  );
+};
 
 export const Header = () => {
   const { state } = useAuthState();
   return (
     <>
       <header id="header-wrap" className="relative">
-        <div className="fixed top-0 left-0 z-30 w-full duration-300 navigation">
-          <div className="container">
-            <nav className="relative flex items-center justify-between py-2 duration-300 navbar navbar-expand-lg">
-              <Link to="/">
-                <span className="navbar-brand">Quicomp</span>
-              </Link>
+        <nav className="bg-white px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+          <div className="container flex flex-wrap items-center justify-between mx-auto">
+            <Link to="/" className="flex items-center">
+              <img src={LogoText} className="h-6 mr-3 sm:h-9" alt="Company Logo" />
+            </Link>
+            <div className="flex gap-4 md:order-2">
+              {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
               <button
-                className="block navbar-toggler focus:outline-none lg:hidden"
                 type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end"
               >
-                <span className="toggler-icon" />
-                <span className="toggler-icon" />
-                <span className="toggler-icon" />
-              </button>
-
-              <div
-                className="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white shadow collapse navbar-collapse lg:block top-100 mt-full lg:static lg:bg-transparent lg:shadow-none"
-                id="navbarSupportedContent"
-              >
-                <ul className="items-center justify-center mr-auto navbar-nav lg:flex">
-                  <li className="nav-item">
-                    <a className="page-scroll active" href="#hero-area">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#services">
-                      Services
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#feature">
-                      feature
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#team">
-                      Team
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#testimonial">
-                      Testimonial
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#pricing">
-                      Pricing
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#contact">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="hidden header-btn sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
-                <a
-                  className="px-10 py-3 text-blue-600 duration-300 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
-                  href="#feature"
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  FAQ
-                </a>
-              </div>
-              <div className="hidden header-btn sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
-                {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
-              </div>
-            </nav>
+                  <path
+                    fillRule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <ul tabIndex={0} className="p-2 mt-10 shadow menu dropdown-content bg-base-100 rounded-box w-52 top-2">
+                  <ListItem />
+                </ul>
+              </button>
+            </div>
+            <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+              <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                <ListItem className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" />
+              </ul>
+            </div>
           </div>
-        </div>
+        </nav>
       </header>
       <Outlet />
     </>
