@@ -1,4 +1,5 @@
 import { Head } from '~/components/shared/Head';
+import { Contact } from '../domain/layouts/Contact';
 import { Feature } from '../domain/layouts/Feature';
 import { Hero } from '../domain/layouts/Hero';
 import { Service } from '../domain/layouts/Service';
@@ -11,6 +12,7 @@ function Index() {
         <Hero />
         <Service />
         <Feature />
+        <Contact />
       </div>
     </>
   );

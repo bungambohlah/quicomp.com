@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { RouteObject, useRoutes, BrowserRouter } from 'react-router-dom';
-import { Header } from '../domain/layouts/Header';
+import { Layout } from '../domain/layouts/Layout';
 
 const Loading = () => <p className="w-full h-full p-4 text-center">Loading...</p>;
 
@@ -19,7 +19,7 @@ const InnerRouter = () => {
   const routes: RouteObject[] = [
     {
       path: '/',
-      element: <Header />,
+      element: <Layout />,
       children: [
         {
           index: true,

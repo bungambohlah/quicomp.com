@@ -93,32 +93,7 @@ p {
 .feature-title {
   @apply block mb-3 font-medium text-gray-800;
 }
-.team-item {
-  @apply m-3 text-center duration-300 bg-white shadow;
-}
-.team-item:hover {
-  @apply shadow-lg;
-}
-.team-overlay {
-  @apply absolute top-0 left-0 flex items-center justify-center w-full h-full duration-300 bg-gray-200 opacity-0;
-}
-.team-overlay:hover {
-  @apply opacity-100;
-}
 
-.social-link {
-  @apply flex items-center justify-center w-10 h-10 text-lg text-white duration-300 bg-blue-600 rounded;
-}
-.team-name {
-  @apply my-2 text-lg font-bold text-gray-800 uppercase;
-}
-
-.client-logo {
-  @apply duration-300 opacity-50;
-}
-.client-logo:hover {
-  @apply opacity-100;
-}
 .tns-nav {
   @apply absolute bottom-0 w-full -mb-16 text-center;
 }
@@ -131,9 +106,6 @@ p {
 }
 .tns-nav button:focus {
   @apply outline-none;
-}
-.package-name {
-  @apply text-sm font-bold text-blue-600 uppercase;
 }
 
 .form-input {
@@ -161,4 +133,10 @@ p {
 
 .container-section {
   @apply pl-5 pr-5 ml-auto mr-auto max-w-7xl;
+}
+
+.google-map-contact {
+  border: 0;
+  height: 450px;
+  width: 100%;
 }
