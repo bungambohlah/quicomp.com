@@ -49,7 +49,7 @@ p {
   @apply bg-gray-500;
 }
 .sticky {
-  @apply fixed bg-white shadow;
+  @apply fixed shadow backdrop-blur-sm bg-blue-100/80;
 }
 .collapse.show {
   @apply block;
