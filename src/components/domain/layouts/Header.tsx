@@ -16,13 +16,13 @@ const ListItem = ({ className = '' }: ListItemProps) => {
         </a>
       </li>
       <li>
-        <a href="#about" className={className}>
-          About
+        <a href="#services" className={className}>
+          Services
         </a>
       </li>
       <li>
-        <a href="#services" className={className}>
-          Services
+        <a href="#about" className={className}>
+          About
         </a>
       </li>
       <li>
@@ -77,7 +77,7 @@ export const Header = () => {
           </div>
         </nav>
       </header>
-      <div className="relative z-10 bg-blue-100">
+      <div className="relative z-10">
         <Outlet />
       </div>
     </>

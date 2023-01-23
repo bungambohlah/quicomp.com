@@ -5,8 +5,8 @@ function Hero() {
   const { state } = useAuthState();
 
   return (
-    <section id="hero-area" className="pt-48 pb-10 bg-blue-100">
-      <div className="container">
+    <section id="home" className="pt-48 pb-10 bg-blue-100">
+      <div className="container-section">
         <div className="flex justify-between">
           <div className="w-full text-center">
             <h2 className="mb-10 text-4xl font-bold leading-snug text-gray-700 wow fadeInUp" data-wow-delay="1s">

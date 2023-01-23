@@ -45,6 +45,9 @@ p {
 .btn:hover {
   @apply bg-blue-500;
 }
+.btn-disabled {
+  @apply bg-gray-500;
+}
 .sticky {
   @apply fixed bg-white shadow;
 }
@@ -129,12 +132,6 @@ p {
 .tns-nav button:focus {
   @apply outline-none;
 }
-.pricing-box {
-  @apply p-6 pb-10 m-3 text-center duration-300 rounded shadow;
-}
-.pricing-box:hover {
-  @apply bg-blue-100 shadow-lg;
-}
 .package-name {
   @apply text-sm font-bold text-blue-600 uppercase;
 }
@@ -160,4 +157,8 @@ p {
 }
 .footer-icon:hover {
   @apply text-white;
+}
+
+.container-section {
+  @apply pl-5 pr-5 ml-auto mr-auto max-w-7xl;
 }
