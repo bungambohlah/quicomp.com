@@ -39,7 +39,7 @@ export const Header = () => {
   return (
     <>
       <header id="header-wrap" className="relative">
-        <nav className="bg-white px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+        <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 bg-blue-100">
           <div className="container flex flex-wrap items-center justify-between mx-auto">
             <Link to="/" className="flex items-center">
               <img src={LogoText} className="h-6 mr-3 sm:h-9" alt="Company Logo" />
@@ -48,7 +48,7 @@ export const Header = () => {
               {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
               <button
                 type="button"
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end"
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end"
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
@@ -70,14 +70,16 @@ export const Header = () => {
               </button>
             </div>
             <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-              <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
-                <ListItem className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" />
+              <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+                <ListItem className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-transparent md:hover:text-blue-700 md:p-0" />
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <Outlet />
+      <div className="relative z-10 bg-blue-100">
+        <Outlet />
+      </div>
     </>
   );
 };
