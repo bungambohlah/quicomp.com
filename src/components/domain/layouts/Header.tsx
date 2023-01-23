@@ -21,8 +21,8 @@ const ListItem = ({ className = '' }: ListItemProps) => {
         </a>
       </li>
       <li>
-        <a href="#about" className={className}>
-          About
+        <a href="#features" className={className}>
+          Feature
         </a>
       </li>
       <li>
