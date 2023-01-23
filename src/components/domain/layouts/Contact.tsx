@@ -4,12 +4,16 @@ function Contact() {
       <section id="contact" className="py-24">
         <div className="container-section">
           <div className="text-center">
-            <h2 className="mb-12 text-4xl font-bold tracking-wide text-gray-700 wow fadeInDown" data-wow-delay="0.3s">
+            <h2
+              className="mb-12 text-4xl font-bold tracking-wide text-gray-700"
+              data-aos="fade-down"
+              data-aos-delay="300"
+            >
               Contact
             </h2>
           </div>
 
-          <div className="flex flex-wrap contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+          <div className="flex flex-wrap contact-form-area" data-aos="fade-up" data-aos-delay="400">
             <div className="w-full md:w-1/2">
               <div className="contact">
                 <h2 className="mb-5 ml-3 text-xl font-bold text-gray-700 uppercase">Contact Form</h2>
@@ -79,7 +83,7 @@ function Contact() {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="ml-3 md:ml-12 wow fadeIn">
+              <div className="ml-3 md:ml-12" data-aos="fade">
                 <h2 className="mb-5 text-xl font-bold text-gray-700 uppercase">Get In Touch</h2>
                 <div>
                   <div className="flex flex-wrap items-center mb-6">
@@ -121,13 +125,14 @@ function Contact() {
         </div>
       </section>
 
-      <section id="google-map-area">
+      <section id="google-map-area" data-aos="fade-down" data-aos-delay="500">
         <div className="mx-6 mb-6">
           <div className="flex">
             <div className="w-full">
               <object
                 className="google-map-contact"
                 data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7887109309127!2d-77.44196278417968!3d38.95165507956235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU3JzA2LjAiTiA3N8KwMjYnMjMuMiJX!5e0!3m2!1sen!2sbd!4v1545420879707"
+                title="Google Map Marker"
               />
             </div>
           </div>

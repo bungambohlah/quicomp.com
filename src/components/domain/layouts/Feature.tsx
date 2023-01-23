@@ -7,11 +7,11 @@ function Feature() {
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2">
             <div className="mb-5 lg:mb-0">
-              <h2 className="mb-12 section-heading wow fadeInDown" data-wow-delay="0.3s">
+              <h2 className="mb-12 section-heading" data-aos="fade-down" data-aos-delay="300">
                 Learn More About Us
               </h2>
 
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap" data-aos="fade-down" data-aos-delay="800">
                 <div className="w-full sm:w-1/2 lg:w-1/2">
                   <div className="m-3">
                     <div className="text-4xl icon">
@@ -60,7 +60,7 @@ function Feature() {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight" data-wow-delay="0.3s">
+            <div className="mx-3 lg:mr-0 lg:ml-3" data-aos="fade-right" data-aos-delay="300">
               <img src={FeatureSvg} alt="Our Feature" />
             </div>
           </div>

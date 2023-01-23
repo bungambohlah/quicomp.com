@@ -6,7 +6,7 @@ function Footer() {
       <footer id="footer" className="py-16 bg-gray-800">
         <div className="container-section">
           <div className="flex flex-wrap">
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 wow fadeInUp" data-wow-delay="0.2s">
+            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
               <div className="mx-3 mb-8">
                 <div className="w-10/12 mb-3 footer-logo">
                   <img src={Logo} alt="Company Logo" />
@@ -16,7 +16,7 @@ function Footer() {
                 </p>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 wow fadeInUp" data-wow-delay="0.8s">
+            <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2" data-aos="fade-up" data-aos-delay="800">
               <div className="mx-3 mb-8">
                 <h3 className="mb-5 text-xl font-bold text-white">Find us on</h3>
 

@@ -9,11 +9,13 @@ function Hero() {
       <div className="container-section">
         <div className="flex justify-between">
           <div className="w-full text-center">
-            <h2 className="mb-10 text-4xl font-bold leading-snug text-gray-700 wow fadeInUp" data-wow-delay="1s">
-              Quicomp <br className="hidden lg:block" />
-              Professional Computer Service Provider
+            <h2
+              className="mb-10 text-lg font-bold leading-snug text-gray-700 sm:text-2xl md:text-4xl"
+              data-aos="fade-up"
+            >
+              Professional Computer Service
             </h2>
-            <div className="mb-10 text-center wow fadeInUp" data-wow-delay="1.2s">
+            <div className="mb-10 text-center" data-aos="fade-up">
               {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? (
                 <SignInButton label="Register Now" className="btn" />
               ) : (
@@ -22,7 +24,7 @@ function Hero() {
                 </a>
               )}
             </div>
-            <div className="text-center wow fadeInUp" data-wow-delay="1.6s">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="1600">
               <img className="mx-auto img-fluid" src={HeroSvg} alt="Hero Company" />
             </div>
           </div>

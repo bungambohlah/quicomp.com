@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useAuthState } from '~/components/contexts/UserContext';
-import { SignInButton } from '../auth/SignInButton';
-import { SignOutButton } from '../auth/SignOutButton';
 import LogoText from '../../../logo-text.png';
 
 type ListItemProps = {
@@ -35,7 +32,6 @@ const ListItem = ({ className = '' }: ListItemProps) => {
 };
 
 export const Header = () => {
-  const { state } = useAuthState();
   return (
     <header id="header-wrap" className="relative">
       <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 bg-blue-100">
@@ -44,7 +40,6 @@ export const Header = () => {
             <img src={LogoText} className="h-6 mr-3 sm:h-9" alt="Company Logo" />
           </Link>
           <div className="flex gap-4 md:order-2">
-            {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? <SignInButton /> : <SignOutButton />}
             <button
               type="button"
               className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end"

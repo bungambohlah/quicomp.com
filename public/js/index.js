@@ -1,11 +1,12 @@
 (function () {
-  'use strict';
+  ('use strict');
 
   // ===== Preloader
 
   window.onscroll = function () {
     const headerNavbar = document.querySelector('.navigation');
-    const sticky = headerNavbar.offsetTop;
+    // add offset to 8px for (AOS) animation
+    const sticky = headerNavbar.offsetTop + 8;
 
     if (window.pageYOffset > sticky) {
       headerNavbar.classList.add('sticky');
@@ -76,45 +77,45 @@
   }
 
   // ======== tiny slider for testimonial
-  window.tns({
-    container: '.testimonials',
-    items: 1,
-    slideBy: 'page',
-    autoplay: false,
-    mouseDrag: true,
-    gutter: 0,
-    nav: false,
-    controls: false,
-  });
+  // window.tns({
+  //   container: '.testimonials',
+  //   items: 1,
+  //   slideBy: 'page',
+  //   autoplay: false,
+  //   mouseDrag: true,
+  //   gutter: 0,
+  //   nav: false,
+  //   controls: false,
+  // });
 
-  // ======== tiny slider for portfolio
-  window.tns({
-    container: '.portfolio-carousel',
-    items: 3,
-    slideBy: 'page',
-    autoplay: false,
-    mouseDrag: true,
-    gutter: 30,
-    nav: true,
-    navPosition: 'bottom',
-    controls: false,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      765: {
-        items: 2,
-      },
-      1024: {
-        items: 3,
-      },
-    },
-  });
+  // // ======== tiny slider for portfolio
+  // window.tns({
+  //   container: '.portfolio-carousel',
+  //   items: 3,
+  //   slideBy: 'page',
+  //   autoplay: false,
+  //   mouseDrag: true,
+  //   gutter: 30,
+  //   nav: true,
+  //   navPosition: 'bottom',
+  //   controls: false,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     765: {
+  //       items: 2,
+  //     },
+  //     1024: {
+  //       items: 3,
+  //     },
+  //   },
+  // });
 
-  // WOW Scroll Spy
-  const wow = new window.WOW({
-    // disabled for mobile
-    mobile: false,
+  // Animate on scroll library
+  // @see https://github.com/michalsnik/aos/tree/v2
+  const aos = window.AOS;
+  aos.init({
+    duration: 1200,
   });
-  wow.init();
 })();
