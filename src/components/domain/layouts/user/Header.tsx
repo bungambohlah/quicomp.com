@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Bars3Icon from '@heroicons/react/24/outline/Bars3Icon';
 import MoonIcon from '@heroicons/react/24/outline/MoonIcon';
 import SunIcon from '@heroicons/react/24/outline/SunIcon';
+import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon';
 import { useSignOut } from '~/components/contexts/UserContext';
 
 function Header() {
@@ -69,11 +70,15 @@ function Header() {
 
           {/* Profile icon, opening menu on click */}
           <div className="ml-4 dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <button
+              tabIndex={0}
+              className="inline-flex items-center justify-center btn-ghost btn-circle avatar"
+              title="menu"
+            >
               <div className="w-10 rounded-full">
-                <img src="https://placeimg.com/80/80/people" alt="profile" />
+                <UserCircleIcon />
               </div>
-            </label>
+            </button>
             <div className="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
               <ul tabIndex={0}>
                 <li>
