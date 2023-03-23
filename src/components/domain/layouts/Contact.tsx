@@ -5,7 +5,7 @@ function Contact() {
         <div className="container-section">
           <div className="text-center">
             <h2
-              className="mb-12 text-4xl font-bold tracking-wide text-gray-700"
+              className="mb-12 text-4xl font-bold tracking-wide text-gray-700 dark:text-white"
               data-aos="fade-down"
               data-aos-delay="300"
             >
@@ -13,10 +13,12 @@ function Contact() {
             </h2>
           </div>
 
-          <div className="flex flex-wrap contact-form-area" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex flex-wrap gap-y-12 contact-form-area" data-aos="fade-up" data-aos-delay="400">
             <div className="w-full md:w-1/2">
               <div className="contact">
-                <h2 className="mb-5 ml-3 text-xl font-bold text-gray-700 uppercase">Contact Form</h2>
+                <h2 className="mb-5 ml-3 text-xl font-bold text-gray-700 uppercase dark:text-slate-200">
+                  Contact Form
+                </h2>
                 <form id="contactForm" action="assets/contact.php">
                   <div className="flex flex-wrap">
                     <div className="w-full sm:w-1/2 md:w-full lg:w-1/2">
@@ -84,19 +86,19 @@ function Contact() {
             </div>
             <div className="w-full md:w-1/2">
               <div className="ml-3 md:ml-12" data-aos="fade">
-                <h2 className="mb-5 text-xl font-bold text-gray-700 uppercase">Get In Touch</h2>
+                <h2 className="mb-5 text-xl font-bold text-gray-700 uppercase dark:text-slate-200">Get In Touch</h2>
                 <div>
                   <div className="flex flex-wrap items-center mb-6">
                     <div className="contact-icon">
                       <i className="lni lni-map-marker" />
                     </div>
-                    <p className="pl-3">Skopje, Macedonia</p>
+                    <p className="pl-3 text-gray-600 dark:text-slate-200">Skopje, Macedonia</p>
                   </div>
                   <div className="flex flex-wrap items-center mb-6">
                     <div className="contact-icon">
                       <i className="lni lni-envelope" />
                     </div>
-                    <p className="pl-3">
+                    <p className="pl-3 text-gray-600 dark:text-slate-200">
                       <a href="#" className="block">
                         email@gmail.com
                       </a>
@@ -109,7 +111,7 @@ function Contact() {
                     <div className="contact-icon">
                       <i className="lni lni-phone-set" />
                     </div>
-                    <p className="pl-3">
+                    <p className="pl-3 text-gray-600 dark:text-slate-200">
                       <a href="#" className="block">
                         +42 374 5967
                       </a>

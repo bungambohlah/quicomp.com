@@ -1,4 +1,6 @@
+import Squares2X2Icon from '@heroicons/react/24/outline/Squares2X2Icon';
 import { Link } from 'react-router-dom';
+import { useAuthState } from '~/components/contexts/UserContext';
 import LogoText from '../../../logo-text.png';
 
 type ListItemProps = {
@@ -32,17 +34,32 @@ const ListItem = ({ className = '' }: ListItemProps) => {
 };
 
 export const Header = () => {
+  const { state } = useAuthState();
+
   return (
     <header id="header-wrap" className="relative">
-      <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 bg-blue-100">
+      <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200 bg-blue-100 dark:bg-[#146C94]/80 dark:border-none">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
             <img src={LogoText} className="h-6 mr-3 sm:h-9" alt="Company Logo" />
           </Link>
           <div className="flex gap-4 md:order-2">
+            {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? null : (
+              <Link to="/user/dashboard">
+                <button
+                  type="button"
+                  className="inline-flex items-center p-2 text-white shadow-lg rounded-2xl bg-sky-600 text-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                >
+                  <span className="md:hidden">
+                    <Squares2X2Icon className="w-6 h-6" />
+                  </span>
+                  <span className="hidden md:block">Dashboard</span>
+                </button>
+              </Link>
+            )}
             <button
               type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end"
+              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end dark:text-slate-300 dark:hover:bg-sky-500"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -59,13 +76,13 @@ export const Header = () => {
                 />
               </svg>
               <ul tabIndex={0} className="p-2 mt-10 shadow menu dropdown-content bg-base-100 rounded-box w-52 top-2">
-                <ListItem />
+                <ListItem className="dark:text-white" />
               </ul>
             </button>
           </div>
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-              <ListItem className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-transparent md:hover:text-blue-700 md:p-0" />
+              <ListItem className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white" />
             </ul>
           </div>
         </div>

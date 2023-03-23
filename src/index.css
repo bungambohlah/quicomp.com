@@ -49,7 +49,7 @@ p {
   @apply bg-gray-500;
 }
 .sticky {
-  @apply fixed shadow backdrop-blur-sm bg-blue-100/80;
+  @apply fixed shadow backdrop-blur-sm bg-blue-100/80 dark:bg-[#146C94]/80;
 }
 .collapse.show {
   @apply block;
@@ -83,7 +83,7 @@ p {
 }
 
 .icon {
-  @apply mb-4 text-blue-600;
+  @apply mb-4 text-blue-600 dark:text-sky-700;
 }
 
 .service-title {

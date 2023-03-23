@@ -5,12 +5,12 @@ function Hero() {
   const { state } = useAuthState();
 
   return (
-    <section id="home" className="pt-48 pb-10 bg-blue-100">
+    <section id="home" className="pt-48 pb-10 bg-blue-100 dark:bg-[#146C94]">
       <div className="container-section">
         <div className="flex justify-between">
           <div className="w-full text-center">
             <h2
-              className="mb-10 text-lg font-bold leading-snug text-gray-700 sm:text-2xl md:text-4xl"
+              className="mb-10 text-lg font-bold leading-snug text-gray-700 sm:text-2xl md:text-4xl dark:text-white"
               data-aos="fade-up"
             >
               Professional Computer Service
@@ -25,7 +25,7 @@ function Hero() {
               )}
             </div>
             <div className="text-center" data-aos="fade-up" data-aos-delay="1600">
-              <img className="mx-auto img-fluid" src={HeroSvg} alt="Hero Company" />
+              <img className="mx-auto img-fluid dark:bg-opacity-50" src={HeroSvg} alt="Hero Company" />
             </div>
           </div>
         </div>
