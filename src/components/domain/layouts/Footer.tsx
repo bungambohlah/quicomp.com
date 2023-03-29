@@ -3,7 +3,7 @@ import Logo from '../../../logo.png';
 function Footer() {
   return (
     <>
-      <footer id="footer" className="py-16 bg-gray-800">
+      <footer id="footer" className="py-16 bg-[#282734]">
         <div className="container-section">
           <div className="flex flex-wrap">
             <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
@@ -48,7 +48,7 @@ function Footer() {
         </div>
       </footer>
 
-      <section className="py-6 bg-gray-800 border-t-2 border-gray-700 border-dotted">
+      <section className="py-6 bg-[#282734] border-t-2 border-[#45435a] border-dotted">
         <div className="container-section">
           <div className="flex flex-wrap">
             <div className="w-full text-center">
@@ -56,20 +56,11 @@ function Footer() {
                 Designed by{' '}
                 <a
                   className="text-white duration-300 hover:text-blue-600"
-                  href="https://graygrids.com"
+                  href="https://afif.dev"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  TailwindTemplates
-                </a>{' '}
-                and{' '}
-                <a
-                  className="text-white duration-300 hover:text-blue-600"
-                  href="https://uideck.com"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  UIdeck
+                  afif.dev
                 </a>
               </p>
             </div>

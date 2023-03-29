@@ -36,7 +36,10 @@ function Header() {
       <div className="z-10 flex justify-between shadow-md navbar bg-base-100 ">
         {/* Menu toogle for mobile view or small screen */}
         <div className="">
-          <label htmlFor="left-sidebar-drawer" className="btn btn-primary drawer-button lg:hidden">
+          <label
+            htmlFor="left-sidebar-drawer"
+            className="inline-flex items-center justify-center cursor-pointer btn-ghost btn-circle drawer-button lg:hidden"
+          >
             <Bars3Icon className="inline-block w-5 h-5" />
           </label>
           <h1 className="ml-2 text-2xl font-semibold">Dashboard</h1>
@@ -57,16 +60,6 @@ function Header() {
               className={`fill-current w-6 h-6 ${currentTheme === 'winter' ? 'swap-on' : 'swap-off'}`}
             />
           </label>
-
-          {/* Notification icon */}
-          {/* <button className="ml-4 btn btn-ghost btn-circle" onClick={() => openNotification()}>
-            <div className="indicator">
-              <BellIcon className="w-6 h-6" />
-              {noOfNotifications > 0 ? (
-                <span className="indicator-item badge badge-secondary badge-sm">{noOfNotifications}</span>
-              ) : null}
-            </div>
-          </button> */}
 
           {/* Profile icon, opening menu on click */}
           <div className="ml-4 dropdown dropdown-end">
