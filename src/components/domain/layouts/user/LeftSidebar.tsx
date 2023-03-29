@@ -35,6 +35,8 @@ function LeftSidebar() {
                 </li>
               );
             }
+
+            return null;
           })) ||
           null}
       </ul>

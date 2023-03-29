@@ -3,17 +3,10 @@ import { User, signOut, getAuth } from 'firebase/auth';
 
 type AuthActions = { type: 'SIGN_IN'; payload: { user: User } } | { type: 'SIGN_OUT' };
 
-type AuthState =
-  | {
-      state: 'SIGNED_IN';
-      currentUser: User;
-    }
-  | {
-      state: 'SIGNED_OUT';
-    }
-  | {
-      state: 'UNKNOWN';
-    };
+type AuthState = {
+  state: 'SIGNED_IN' | 'SIGNED_OUT' | 'UNKNOWN';
+  currentUser?: User;
+};
 
 const AuthReducer = (state: AuthState, action: AuthActions): AuthState => {
   switch (action.type) {
@@ -22,7 +15,6 @@ const AuthReducer = (state: AuthState, action: AuthActions): AuthState => {
         state: 'SIGNED_IN',
         currentUser: action.payload.user,
       };
-      break;
     case 'SIGN_OUT':
       return {
         state: 'SIGNED_OUT',
