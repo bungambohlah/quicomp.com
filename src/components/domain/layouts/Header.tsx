@@ -38,7 +38,6 @@ export const Header = () => {
 
   return (
     <header id="header-wrap" className="relative">
-      <div className="circle-header" />
       <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-30 top-0 left-0 border-none">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
@@ -47,10 +46,7 @@ export const Header = () => {
           <div className="flex gap-4 md:order-2">
             {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? null : (
               <Link to="/user/dashboard">
-                <button
-                  type="button"
-                  className="inline-flex items-center p-2 text-white shadow-lg rounded-2xl btn text-md"
-                >
+                <button type="button" className="btn-outline">
                   <span className="md:hidden">
                     <Squares2X2Icon className="w-6 h-6" />
                   </span>
@@ -60,7 +56,7 @@ export const Header = () => {
             )}
             <button
               type="button"
-              className="inline-flex items-center p-2 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dropdown dropdown-end text-slate-300 hover:bg-[#825aff]"
+              className="inline-flex items-center p-2 text-sm rounded-lg md:hidden dropdown dropdown-end text-[#8f9dac]"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -76,14 +72,14 @@ export const Header = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <ul tabIndex={0} className="p-2 mt-10 shadow menu dropdown-content bg-base-100 rounded-box w-52 top-2">
-                <ListItem className="text-white" />
+              <ul tabIndex={0} className="z-30 p-2 mt-10 bg-white shadow menu dropdown-content rounded-box w-52 top-2">
+                <ListItem className="text-[#283262]" />
               </ul>
             </button>
           </div>
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-              <ListItem className="block py-2 pl-3 pr-4 text-white rounded hover:bg-transparent md:hover:text-transparent md:hover:bg-clip-text md:hover:bg-gradient-to-r md:hover:from-[#4158d0] md:hover:via-[#c850c0] md:hover:to-[#ffcc70] md:p-0" />
+              <ListItem className="block py-2 pl-3 pr-4 text-[#283262] rounded hover:bg-transparent md:hover:text-transparent md:hover:bg-clip-text md:hover:bg-gradient-to-tr md:hover:from-[#B721FF] md:hover:to-[#21D4FD] md:p-0 md:hover:bg-[#21D4FD]" />
             </ul>
           </div>
         </div>

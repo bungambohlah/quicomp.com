@@ -1,6 +1,6 @@
 function Service() {
   return (
-    <section id="services" className="py-24 bg-[#282734]">
+    <section id="services" className="py-24">
       <div className="container-section">
         <div className="text-center">
           <h2 className="mb-12 section-heading" data-aos="fade-down" data-aos-delay="300">
@@ -15,7 +15,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">Web Development</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>
@@ -29,7 +29,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">Graphic Design</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>
@@ -43,7 +43,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">Business Branding</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>
@@ -57,7 +57,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">Content Writing</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>
@@ -71,7 +71,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">App Development</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>
@@ -85,7 +85,7 @@ function Service() {
               </div>
               <div>
                 <h3 className="service-title">Digital Marketing</h3>
-                <p className="text-slate-300">
+                <p className="text-[#8f9dac]">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis dicta labore nulla beatae
                   quaerat quia incidunt laborum aspernatur...
                 </p>

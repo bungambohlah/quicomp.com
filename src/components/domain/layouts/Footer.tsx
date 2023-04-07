@@ -3,7 +3,7 @@ import Logo from '../../../logo.png';
 function Footer() {
   return (
     <>
-      <footer id="footer" className="py-16 bg-[#282734]">
+      <footer id="footer" className="py-16 bg-gradient-to-tr from-[#782ee6] to-[#5194c6]">
         <div className="container-section">
           <div className="flex flex-wrap">
             <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2" data-aos="fade-up" data-aos-delay="200">
@@ -11,7 +11,7 @@ function Footer() {
                 <div className="w-10/12 mb-3 footer-logo">
                   <img src={Logo} alt="Company Logo" />
                 </div>
-                <p className="text-gray-300">
+                <p className="text-slate-200">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam excepturi quasi, ipsam voluptatem.
                 </p>
               </div>
@@ -48,14 +48,14 @@ function Footer() {
         </div>
       </footer>
 
-      <section className="py-6 bg-[#282734] border-t-2 border-[#45435a] border-dotted">
+      <section className="py-6 border-t-2 border-white border-dotted bg-gradient-to-tl from-[#5194c6] to-[#782ee6]">
         <div className="container-section">
           <div className="flex flex-wrap">
             <div className="w-full text-center">
               <p className="text-white">
                 Designed by{' '}
                 <a
-                  className="text-white duration-300 hover:text-blue-600"
+                  className="text-white duration-300 hover:text-[#412aff]"
                   href="https://afif.dev"
                   rel="noreferrer noopener"
                   target="_blank"

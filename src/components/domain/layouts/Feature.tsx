@@ -2,7 +2,7 @@ import FeatureSvg from '../../../features.svg';
 
 function Feature() {
   return (
-    <div id="features" className="py-24 bg-[#282734]">
+    <div id="features" className="py-24">
       <div className="container-section">
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2">
@@ -19,7 +19,7 @@ function Feature() {
                     </div>
                     <div className="features-content">
                       <h4 className="feature-title">Built with TailwindCSS</h4>
-                      <p className="text-slate-300">
+                      <p className="text-[#8f9dac]">
                         {' '}
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.
                       </p>
@@ -33,7 +33,7 @@ function Feature() {
                     </div>
                     <div className="features-content">
                       <h4 className="feature-title">Free to Use</h4>
-                      <p className="text-slate-300">
+                      <p className="text-[#8f9dac]">
                         {' '}
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.
                       </p>
@@ -47,7 +47,7 @@ function Feature() {
                     </div>
                     <div className="features-content">
                       <h4 className="feature-title">Fully Responsive</h4>
-                      <p className="text-slate-300">
+                      <p className="text-[#8f9dac]">
                         {' '}
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.
                       </p>
@@ -61,7 +61,7 @@ function Feature() {
                     </div>
                     <div className="features-content">
                       <h4 className="feature-title">Easy to Customize</h4>
-                      <p className="text-slate-300">
+                      <p className="text-[#8f9dac]">
                         {' '}
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.
                       </p>
