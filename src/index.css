@@ -93,11 +93,11 @@ p {
 }
 
 .icon {
-  @apply mb-4 text-transparent bg-clip-text bg-[#21D4FD] bg-gradient-to-tr from-[#B721FF] to-[#21D4FD];
+  @apply text-transparent bg-clip-text bg-[#21D4FD] bg-gradient-to-tr from-[#B721FF] to-[#21D4FD];
 }
 
 .service-title {
-  @apply block mb-3 text-lg font-semibold uppercase text-[#484d6b];
+  @apply block text-lg font-semibold uppercase text-[#484d6b];
 }
 
 .feature-title {
