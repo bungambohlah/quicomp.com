@@ -1,10 +1,9 @@
 import { renderPage } from 'vite-plugin-ssr/server';
 
-export default async function handler(req, res) {
-  const { url } = req;
-  console.log('Request to url:', url);
+export default async function handler(req, res, next) {
+  const pageContextInit = { urlOriginal: req.originalUrl };
+  console.log('Request to url:', req.originalUrl);
 
-  const pageContextInit = { url };
   const pageContext = await renderPage(pageContextInit);
   const { httpResponse } = pageContext;
 
@@ -14,8 +13,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { body, statusCode, contentType } = httpResponse;
-  res.statusCode = statusCode;
-  res.setHeader('content-type', contentType);
-  res.end(body);
+  const { body, statusCode, contentType, earlyHints } = httpResponse;
+  if (res.writeEarlyHints) res.writeEarlyHints({ link: earlyHints.map((e) => e.earlyHintLink) });
+  res.status(statusCode).type(contentType).send(body);
 }
