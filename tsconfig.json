@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
     "allowJs": false,
@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "ES2020",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -17,10 +17,16 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "~/*": [
-        "./*"
-      ]
+      "~/*": ["./*"]
     }
   },
-  "include": ["./src"]
+  "ts-node": {
+    "transpileOnly": true,
+    "esm": true,
+    "compilerOptions": {
+      "moduleResolution": "Node16"
+    }
+  },
+  "include": ["./src", "pages"],
+  "exclude": ["node_modules", "dist"]
 }
