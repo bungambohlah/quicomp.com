@@ -1,8 +1,7 @@
+import React, { useEffect, useRef } from 'react';
 import Header from './Header';
-import { useEffect, useRef } from 'react';
-import { Outlet } from 'react-router-dom';
 
-function PageContent() {
+function PageContent({ children }: { children: React.ReactNode }) {
   const mainContentRef = useRef<HTMLElement | null>(null);
 
   // Scroll back to top on new page load
@@ -19,9 +18,7 @@ function PageContent() {
     <div className="flex flex-col drawer-content ">
       <Header />
       <main className="flex-1 px-6 pt-8 overflow-y-auto bg-base-200" ref={mainContentRef}>
-        <div className="h-16">
-          <Outlet />
-        </div>
+        <div className="h-16">{children}</div>
       </main>
     </div>
   );

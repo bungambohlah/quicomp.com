@@ -1,5 +1,5 @@
 import Squares2X2Icon from '@heroicons/react/24/outline/Squares2X2Icon';
-import { Link } from 'react-router-dom';
+import { Link } from '~/components/domain/Link';
 import { useAuthState } from '~/components/contexts/UserContext';
 import LogoText from '../../../logo-text.png';
 
@@ -10,22 +10,22 @@ const ListItem = ({ className = '' }: ListItemProps) => {
   return (
     <>
       <li>
-        <a href="#home" className={className} aria-current="page">
+        <a href="#home" className={`page-scroll ${className}`} aria-current="page">
           Home
         </a>
       </li>
       <li>
-        <a href="#services" className={className}>
+        <a href="#services" className={`page-scroll ${className}`}>
           Services
         </a>
       </li>
       <li>
-        <a href="#features" className={className}>
+        <a href="#features" className={`page-scroll ${className}`}>
           Feature
         </a>
       </li>
       <li>
-        <a href="#contact" className={className}>
+        <a href="#contact" className={`page-scroll ${className}`}>
           Contact
         </a>
       </li>
@@ -40,12 +40,12 @@ export const Header = () => {
     <header id="header-wrap" className="relative">
       <nav className="navigation px-2 sm:px-4 py-2.5 fixed w-full z-30 top-0 left-0 border-none">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <Link to="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img src={LogoText} className="h-6 mr-3 sm:h-9 contrast-150" alt="Company Logo" />
           </Link>
           <div className="flex gap-4 md:order-2">
             {state.state === 'UNKNOWN' ? null : state.state === 'SIGNED_OUT' ? null : (
-              <Link to="/user/dashboard">
+              <Link href="/user/dashboard">
                 <button type="button" className="btn-outline">
                   <span className="md:hidden">
                     <Squares2X2Icon className="w-6 h-6" />

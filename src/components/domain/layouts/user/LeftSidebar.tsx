@@ -1,20 +1,19 @@
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import { userDashboardRoutes as routes } from '~/components/router/Router';
+// import { usePageContext } from '~/renderer/usePageContext';
+import { Link } from '~/components/domain/Link';
+// import { userDashboardRoutes as routes } from '~/components/router/Router';
 import LogoText from '~/logo-text.png';
 
 function LeftSidebar() {
-  const location = useLocation();
-
   return (
     <div className="drawer-side ">
       <label htmlFor="left-sidebar-drawer" className="drawer-overlay" />
       <ul className="pt-2 menu w-80 bg-base-100 text-base-content">
         <li className="mb-2 text-xl font-semibold">
-          <Link to="/user/dashboard">
+          <Link href="/user/dashboard">
             <img className="w-24" src={LogoText} alt="Company Logo" />
           </Link>
         </li>
-        {(routes &&
+        {/* {(routes &&
           routes.children.map((route, k) => {
             if (route.path !== '*') {
               return (
@@ -38,7 +37,7 @@ function LeftSidebar() {
 
             return null;
           })) ||
-          null}
+          null} */}
       </ul>
     </div>
   );

@@ -1,7 +1,8 @@
+import React from 'react';
 import { useAuthState } from '~/components/contexts/UserContext';
 import HeroSvg from '../../../hero.svg';
 import { SignInButton } from '../auth/SignInButton';
-function Hero() {
+function Hero(): React.ReactElement {
   const { state } = useAuthState();
 
   return (
