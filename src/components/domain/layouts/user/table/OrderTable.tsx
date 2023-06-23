@@ -1,9 +1,15 @@
-import { Prisma } from '@prisma/client';
-import React from 'react';
-
 export const columns = ['', 'Nama', 'Tipe Komputer', 'Permasalahan'];
 
-export type OrderType = Prisma.OrderGetPayload<{}>;
+export type OrderType = {
+  id: number;
+  email: string;
+  name: string | null;
+  computer_type: string;
+  description: string;
+  status: 'pending' | 'progress' | 'done';
+  createdAt: Date;
+  updatedAt: Date;
+};
 
 type OrderTableProps = {
   datas: OrderType[];
