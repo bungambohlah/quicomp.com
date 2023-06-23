@@ -18,4 +18,4 @@ function UserLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default UserLayout;
+export { UserLayout };

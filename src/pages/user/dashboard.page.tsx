@@ -1,6 +1,7 @@
 import OrderTable, { OrderType } from '~/components/domain/layouts/user/table/OrderTable';
 import PlusCircleIcon from '@heroicons/react/24/outline/PlusCircleIcon';
 import { useAuthState } from '~/components/contexts/UserContext';
+import { UserLayout as Layout } from '~/components/domain/layouts/user/UserLayout';
 
 function Page() {
   const { state } = useAuthState();
@@ -29,8 +30,8 @@ function Page() {
   );
 }
 
-export const documentProps = {
+const documentProps = {
   title: 'Quicomp | User Dashboard',
 };
 
-export { Page };
+export { Page, Layout, documentProps };
