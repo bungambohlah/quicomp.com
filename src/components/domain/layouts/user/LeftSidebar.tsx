@@ -1,9 +1,12 @@
-// import { usePageContext } from '~/renderer/usePageContext';
 import { Link } from '~/components/domain/Link';
-// import { userDashboardRoutes as routes } from '~/components/router/Router';
 import LogoText from '~/logo-text.png';
+import { usePageContext } from '~/renderer/usePageContext';
+import LeftSidebarItem from './LeftSidebarItem';
 
 function LeftSidebar() {
+  const { urlPathname = '' } = usePageContext();
+  const urlReplaced = urlPathname.replace(/\/$/, '');
+
   return (
     <div className="drawer-side ">
       <label htmlFor="left-sidebar-drawer" className="drawer-overlay" />
@@ -13,31 +16,9 @@ function LeftSidebar() {
             <img className="w-24" src={LogoText} alt="Company Logo" />
           </Link>
         </li>
-        {/* {(routes &&
-          routes.children.map((route, k) => {
-            if (route.path !== '*') {
-              return (
-                <li key={k}>
-                  <NavLink
-                    end
-                    to={route.index ? routes.path : route.path}
-                    className={({ isActive }) => `${isActive ? 'font-semibold  bg-base-200 ' : 'font-normal'}`}
-                  >
-                    {route.icon} {route.name}
-                    {location.pathname === route.path ? (
-                      <span
-                        className="absolute inset-y-0 left-0 w-1 rounded-tr-md rounded-br-md bg-primary "
-                        aria-hidden="true"
-                      />
-                    ) : null}
-                  </NavLink>
-                </li>
-              );
-            }
-
-            return null;
-          })) ||
-          null} */}
+        <li>
+          <LeftSidebarItem href="/user/dashboard" title="Dashboard" isActive={urlReplaced === '/user/dashboard'} />
+        </li>
       </ul>
     </div>
   );
