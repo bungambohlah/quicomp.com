@@ -15,7 +15,7 @@ function PageContent({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="flex flex-col drawer-content ">
+    <div className="flex flex-col drawer-content">
       <Header />
       <main className="flex-1 px-6 pt-8 overflow-y-auto bg-base-200" ref={mainContentRef}>
         <div className="h-16">{children}</div>

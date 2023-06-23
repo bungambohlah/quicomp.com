@@ -47,7 +47,7 @@ function Header() {
 
         <div className="order-last">
           {/* Winter and dark theme selection toogle **/}
-          <label className="swap ">
+          <label className="swap swap-rotate">
             <input type="checkbox" title="choose theme" />
             <SunIcon
               data-set-theme="winter"

@@ -8,9 +8,9 @@ function LeftSidebar() {
   const urlReplaced = urlPathname.replace(/\/$/, '');
 
   return (
-    <div className="drawer-side ">
+    <div className="drawer-side">
       <label htmlFor="left-sidebar-drawer" className="drawer-overlay" />
-      <ul className="pt-2 menu w-80 bg-base-100 text-base-content">
+      <ul className="pt-8 lg:pt-4 menu w-80 h-full bg-base-100 text-base-content">
         <li className="mb-2 text-xl font-semibold">
           <Link href="/user/dashboard">
             <img className="w-24" src={LogoText} alt="Company Logo" />
