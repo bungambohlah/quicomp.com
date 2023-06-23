@@ -7,8 +7,9 @@
   },
   "type": "module",
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "npm run server",
-    "vercel-build": "npx prisma generate && vite build",
+    "vercel-build": "vite build",
     "server": "ts-node ./src/server/index.ts",
     "server:prod": "cross-env NODE_ENV=production ts-node ./src/server/index.ts",
     "lint": "eslint 'src/**' --max-warnings 0"
