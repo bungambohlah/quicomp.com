@@ -6,20 +6,23 @@ import logoIcon from '../logo.png';
 import { Layout as LayoutDefault } from '../components/domain/layouts/Layout';
 import type { PageContextServer } from './types';
 
+// This render() hook can support SSR, ISR, and SSG
+// see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
 async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;
   const Layout = pageContext.exports.Layout || LayoutDefault;
-  // This render() hook only supports SSR, see https://vite-plugin-ssr.com/render-modes for how to modify render() to support SPA
-  if (!Page) throw new Error('My render() hook expects pageContext.Page to be defined');
-  const pageHtml = dangerouslySkipEscape(
-    renderToString(
-      <PageShell pageContext={pageContext}>
-        <Layout>
-          <Page {...pageProps} />
-        </Layout>
-      </PageShell>
-    )
-  );
+  let pageHtml = dangerouslySkipEscape(renderToString(<PageShell pageContext={pageContext}>{null}</PageShell>));
+  if (Page && pageProps && typeof pageProps.is404 !== 'boolean') {
+    pageHtml = dangerouslySkipEscape(
+      renderToString(
+        <PageShell pageContext={pageContext}>
+          <Layout>
+            <Page {...pageProps} />
+          </Layout>
+        </PageShell>
+      )
+    );
+  }
 
   // See https://vite-plugin-ssr.com/head
   const { documentProps } = pageContext.exports;
