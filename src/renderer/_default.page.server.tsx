@@ -79,9 +79,6 @@ async function render(pageContext: PageContextServer) {
       </head>
       <body>
         <div id="react-root">${pageHtml}</div>
-        <script src="/js/aos.js"></script>
-        <!-- <script src="/js/tiny-slider.js"></script> -->
-        <script src="/js/index.js"></script>
       </body>
     </html>`;
 
