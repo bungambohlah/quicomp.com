@@ -16,6 +16,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.16",
+    "@magne4000/vite-plugin-vercel-ssr": "^0.2.0",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "daisyui": "^2.47.0",
@@ -29,7 +30,8 @@
     "sirv": "^2.0.3",
     "theme-change": "^2.5.0",
     "ts-node": "^10.9.1",
-    "vite-plugin-ssr": "^0.4.131"
+    "vite-plugin-ssr": "^0.4.131",
+    "vite-plugin-vercel": "^0.2.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
