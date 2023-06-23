@@ -111,11 +111,28 @@
   //     },
   //   },
   // });
+})();
 
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+    return;
+  }
+  document.addEventListener('DOMContentLoaded', fn);
+}
+
+ready(() => {
   // Animate on scroll library
   // @see https://github.com/michalsnik/aos/tree/v2
-  const aos = window.AOS;
-  aos.init({
-    duration: 1200,
+  window.setInterval(() => {
+    const aos = window.AOS;
+    try {
+      aos.init({
+        duration: 1200,
+      });
+      clearInterval(this);
+    } catch (error) {
+      console.error(error);
+    }
   });
-})();
+});
