@@ -1,13 +1,10 @@
+import { Prisma } from '@prisma/client';
 import React from 'react';
 
 export const columns = ['', 'Nama', 'Tipe Komputer', 'Permasalahan'];
 
-export type OrderType = {
-  name: string;
-  computer_type: string;
-  computer_problem_desc: string;
-  status: 'pending' | 'progress' | 'done';
-};
+export type OrderType = Prisma.OrderGetPayload<{}>;
+
 type OrderTableProps = {
   datas: OrderType[];
 };
@@ -30,7 +27,7 @@ function OrderTable({ datas }: OrderTableProps) {
               <th>{idx + 1}</th>
               <td>{data.name}</td>
               <td>{data.computer_type}</td>
-              <td>{data.computer_problem_desc}</td>
+              <td>{data.description}</td>
               <td>
                 {data.status === 'pending' && <div className="badge badge-warning">Menunggu</div>}
                 {data.status === 'progress' && <div className="badge badge-info">Proses</div>}
